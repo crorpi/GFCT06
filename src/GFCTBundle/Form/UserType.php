@@ -39,7 +39,7 @@ class UserType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'GFCTBundle\Entity\User'
+            'data_class' => 'GFCTBundle\Entity\Usuario'
         ));
     }
 

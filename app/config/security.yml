@@ -2,11 +2,15 @@
 # http://symfony.com/doc/current/book/security.html
 security:
     encoders:
-        GFCTBundle\Entity\User: bcrypt
-        Symfony\Component\Security\Core\User\User: plaintext
+        GFCTBundle\Entity\Usuario:
+            algorithm: bcrypt
 
     # http://symfony.com/doc/current/book/security.html#where-do-users-come-from-user-providers
     providers:
+        our_db_provider:
+            entity:
+                class: GFCTBundle:Usuario
+                property: username
         in_memory:
             memory: 
                 users:
@@ -29,7 +33,7 @@ security:
 
             pattern: ^/usuarios
             anonymous: ~
-            provider: in_memory
+            provider: our_db_provider
             form_login:
                 login_path: /usuarios/login
                 check_path: /usuarios/login
@@ -47,4 +51,8 @@ security:
 
     access_control:
     - { path: ^/usuarios/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
-    - { path: ^/usuarios, roles: ROLE_ADMIN }
+    - { path: ^/register, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+    - { path: ^/, roles: ROLE_USER }
+    role_hierarchy:
+        ROLE_ADMIN:       ROLE_USER
+        ROLE_SUPER_ADMIN: [ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH]

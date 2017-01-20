@@ -15,8 +15,8 @@ class __TwigTemplate_a2a37e3daeb16ce03452fec1fa5f14eb43430ad3cad9868124280ca83ff
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_dac323d6c5fb118944b1c792311f19a040af057c4a00ff575eea28d9d07e06e1 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_dac323d6c5fb118944b1c792311f19a040af057c4a00ff575eea28d9d07e06e1->enter($__internal_dac323d6c5fb118944b1c792311f19a040af057c4a00ff575eea28d9d07e06e1_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "GFCTBundle:Default:index.html.twig"));
+        $__internal_2c6ba22a3af994a93f8771398d4b89fe451c92559b8acc791ccda873d484a8e8 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_2c6ba22a3af994a93f8771398d4b89fe451c92559b8acc791ccda873d484a8e8->enter($__internal_2c6ba22a3af994a93f8771398d4b89fe451c92559b8acc791ccda873d484a8e8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "GFCTBundle:Default:index.html.twig"));
 
         // line 1
         echo "<body>
@@ -26,7 +26,7 @@ PRINCIPAL
 </body>
 ";
         
-        $__internal_dac323d6c5fb118944b1c792311f19a040af057c4a00ff575eea28d9d07e06e1->leave($__internal_dac323d6c5fb118944b1c792311f19a040af057c4a00ff575eea28d9d07e06e1_prof);
+        $__internal_2c6ba22a3af994a93f8771398d4b89fe451c92559b8acc791ccda873d484a8e8->leave($__internal_2c6ba22a3af994a93f8771398d4b89fe451c92559b8acc791ccda873d484a8e8_prof);
 
     }
 

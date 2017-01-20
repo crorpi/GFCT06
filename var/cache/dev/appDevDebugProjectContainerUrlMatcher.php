@@ -195,20 +195,28 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             return array (  '_controller' => 'GFCTBundle\\Controller\\DefaultController::adminAction',  '_route' => 'admin',);
         }
 
-        if (0 === strpos($pathinfo, '/usuarios')) {
+        if (0 === strpos($pathinfo, '/usuario')) {
             // usuarioslogin
             if ($pathinfo === '/usuarios/login') {
                 return array (  '_controller' => 'GFCTBundle\\Controller\\DefaultController::loginAction',  '_route' => 'usuarioslogin',);
             }
 
-            // usuarios
-            if ($pathinfo === '/usuarios') {
-                return array (  '_controller' => 'GFCTBundle\\Controller\\DefaultController::usuariosAction',  '_route' => 'usuarios',);
+            // usuarioPrueba
+            if ($pathinfo === '/usuarioPrueba') {
+                return array (  '_controller' => 'GFCTBundle\\Controller\\DefaultController::usuarioPruebaAction',  '_route' => 'usuarioPrueba',);
             }
 
-            // logout
-            if ($pathinfo === '/usuarios/logout') {
-                return array('_route' => 'logout');
+            if (0 === strpos($pathinfo, '/usuarios')) {
+                // usuarios
+                if ($pathinfo === '/usuarios') {
+                    return array (  '_controller' => 'GFCTBundle\\Controller\\DefaultController::usuariosAction',  '_route' => 'usuarios',);
+                }
+
+                // logout
+                if ($pathinfo === '/usuarios/logout') {
+                    return array('_route' => 'logout');
+                }
+
             }
 
         }

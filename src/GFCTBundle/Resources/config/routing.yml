@@ -56,7 +56,10 @@ admin:
 
 usuarioslogin:
     path:     /usuarios/login
-    defaults: { _controller: GFCTBundle:Default:login }       
+    defaults: { _controller: GFCTBundle:Default:login }
+usuarioPrueba:
+    path:     /usuarioPrueba
+    defaults: { _controller: GFCTBundle:Default:usuarioPrueba }             
 
 usuarios:
     path:     /usuarios
